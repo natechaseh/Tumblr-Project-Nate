@@ -14,6 +14,12 @@
 		AA9735211C7D043900C33063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA97351F1C7D043900C33063 /* LaunchScreen.storyboard */; };
 		AA97352C1C7D043900C33063 /* Tumblr_Project_NateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97352B1C7D043900C33063 /* Tumblr_Project_NateTests.swift */; };
 		AA9735371C7D043900C33063 /* Tumblr_Project_NateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9735361C7D043900C33063 /* Tumblr_Project_NateUITests.swift */; };
+		AA9735451C7D061000C33063 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9735441C7D061000C33063 /* TabBarViewController.swift */; };
+		AA9735471C7D065500C33063 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9735461C7D065500C33063 /* HomeViewController.swift */; };
+		AA9735491C7D066000C33063 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9735481C7D066000C33063 /* SearchViewController.swift */; };
+		AA97354B1C7D066F00C33063 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97354A1C7D066F00C33063 /* ComposeViewController.swift */; };
+		AA97354D1C7D067C00C33063 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97354C1C7D067C00C33063 /* AccountViewController.swift */; };
+		AA97354F1C7D068B00C33063 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97354E1C7D068B00C33063 /* TrendingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		AA9735321C7D043900C33063 /* Tumblr Project NateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tumblr Project NateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9735361C7D043900C33063 /* Tumblr_Project_NateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tumblr_Project_NateUITests.swift; sourceTree = "<group>"; };
 		AA9735381C7D043900C33063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9735441C7D061000C33063 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AA9735461C7D065500C33063 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AA9735481C7D066000C33063 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AA97354A1C7D066F00C33063 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		AA97354C1C7D067C00C33063 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AA97354E1C7D068B00C33063 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,12 @@
 				AA9735161C7D043900C33063 /* AppDelegate.swift */,
 				AA9735181C7D043900C33063 /* ViewController.swift */,
 				AA97351A1C7D043900C33063 /* Main.storyboard */,
+				AA9735461C7D065500C33063 /* HomeViewController.swift */,
+				AA9735481C7D066000C33063 /* SearchViewController.swift */,
+				AA97354A1C7D066F00C33063 /* ComposeViewController.swift */,
+				AA97354C1C7D067C00C33063 /* AccountViewController.swift */,
+				AA97354E1C7D068B00C33063 /* TrendingViewController.swift */,
+				AA9735441C7D061000C33063 /* TabBarViewController.swift */,
 				AA97351D1C7D043900C33063 /* Assets.xcassets */,
 				AA97351F1C7D043900C33063 /* LaunchScreen.storyboard */,
 				AA9735221C7D043900C33063 /* Info.plist */,
@@ -259,8 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9735491C7D066000C33063 /* SearchViewController.swift in Sources */,
+				AA97354F1C7D068B00C33063 /* TrendingViewController.swift in Sources */,
 				AA9735191C7D043900C33063 /* ViewController.swift in Sources */,
+				AA97354D1C7D067C00C33063 /* AccountViewController.swift in Sources */,
+				AA9735451C7D061000C33063 /* TabBarViewController.swift in Sources */,
+				AA97354B1C7D066F00C33063 /* ComposeViewController.swift in Sources */,
 				AA9735171C7D043900C33063 /* AppDelegate.swift in Sources */,
+				AA9735471C7D065500C33063 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
