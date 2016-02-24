@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UITabBarController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TabBarViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -17,41 +17,64 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2IK-MH-oVV">
+                                        <rect key="frame" x="11" y="4" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="home_icon"/>
+                                        <state key="selected" image="home_selected_icon"/>
+                                        <connections>
+                                            <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ae-uO-kfh"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cjn-Q6-diz">
-                                        <rect key="frame" x="89" y="3" width="35" height="35"/>
+                                        <rect key="frame" x="74" y="4" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="search_icon"/>
                                         <state key="selected" image="search_selected_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QSe-g2-f4l">
-                                        <rect key="frame" x="146" y="4" width="50" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="compose_button"/>
+                                        <connections>
+                                            <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VS-fT-qDC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jlt-yl-m0O">
                                         <rect key="frame" x="218" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="account_icon"/>
                                         <state key="selected" image="account_selected_icon"/>
+                                        <connections>
+                                            <action selector="accountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ez7-st-uCH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RsL-wz-ghD">
                                         <rect key="frame" x="272" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="trending_icon"/>
                                         <state key="selected" image="trending_selected_icon"/>
+                                        <connections>
+                                            <action selector="trendingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tds-Wc-xPM"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2IK-MH-oVV">
-                                        <rect key="frame" x="11" y="4" width="35" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QSe-g2-f4l">
+                                        <rect key="frame" x="135" y="5" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="home_icon"/>
-                                        <state key="selected" image="home_selected_icon"/>
+                                        <state key="normal" image="compose_button"/>
+                                        <connections>
+                                            <action selector="composeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KU2-Y4-D5f"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.016029210333379" green="0.0" blue="0.30440117801047117" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" id="0p2-ZA-zU7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="0p2-ZA-zU7" id="WMm-pZ-WE1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +83,7 @@
         <!--Home View Controller-->
         <scene sceneID="nxD-k7-0QU">
             <objects>
-                <viewController id="v4C-zL-RSF" customClass="HomeViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="v4C-zL-RSF" customClass="HomeViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vek-qY-Lau">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="-721" y="1102"/>
         </scene>
-        <!--Preview Controller-->
+        <!--Search View Controller-->
         <scene sceneID="Cnd-DC-BE0">
             <objects>
-                <viewController id="X6w-77-deV" customClass="QLPreviewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="X6w-77-deV" customClass="SearchViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eS2-2F-leB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +111,7 @@
         <!--Compose View Controller-->
         <scene sceneID="LVT-uI-UHY">
             <objects>
-                <viewController id="ozt-iR-cSS" customClass="ComposeViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComposeViewController" id="ozt-iR-cSS" customClass="ComposeViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5q7-PC-s4R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +125,7 @@
         <!--Account View Controller-->
         <scene sceneID="cqE-Ft-TAA">
             <objects>
-                <viewController id="iNQ-gB-Urb" customClass="AccountViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="iNQ-gB-Urb" customClass="AccountViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X4X-1d-jED">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +139,7 @@
         <!--Trending View Controller-->
         <scene sceneID="0MM-Bg-pMR">
             <objects>
-                <viewController id="cyQ-oD-2ux" customClass="TrendingViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrendingViewController" id="cyQ-oD-2ux" customClass="TrendingViewController" customModule="Tumblr_Project_Nate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c0x-B5-F6L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

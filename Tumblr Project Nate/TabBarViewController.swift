@@ -10,9 +10,18 @@ import UIKit
 
 class TabBarViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
+    
+    var homeViewController: UIViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            homeViewController =
+                storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as!
+                UIViewController
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +31,22 @@ class TabBarViewController: UIViewController {
     }
     
 
+    @IBAction func homeButton(sender: AnyObject) {
+    }
+    
+    @IBAction func searchButton(sender: AnyObject) {
+    }
+    
+    @IBAction func accountButton(sender: AnyObject) {
+    }
+ 
+    @IBAction func trendingButton(sender: AnyObject) {
+    }
+    
+    @IBAction func composeButton(sender: AnyObject) {
+    }
+    
+    
     /*
     // MARK: - Navigation
 
