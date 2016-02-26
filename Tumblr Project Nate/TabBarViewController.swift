@@ -10,17 +10,34 @@ import UIKit
 
 class TabBarViewController: UIViewController {
 
+    //outlets
+    
     @IBOutlet weak var contentView: UIView!
     
+    //variables
+    
     var homeViewController: UIViewController!
+    var trendingViewController: UIViewController!
+    var searchViewController: UIViewController!
+    var accountViewController: UIViewController!
+
+    //viewdidload
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //load VCs
+        
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-            homeViewController =
-                storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as!
-                UIViewController
+        
+        
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
+        
+        trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
+        
+        searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
+        
+        accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
         
         // Do any additional setup after loading the view.
     }
@@ -32,18 +49,38 @@ class TabBarViewController: UIViewController {
     
 
     @IBAction func homeButton(sender: AnyObject) {
+        
+        contentView.addSubview(homeViewController.view)
+        
     }
     
     @IBAction func searchButton(sender: AnyObject) {
+        
+        contentView.addSubview(searchViewController.view)
+        
     }
     
     @IBAction func accountButton(sender: AnyObject) {
+        
+        contentView.addSubview(accountViewController.view)
+        
+        
+        
     }
  
     @IBAction func trendingButton(sender: AnyObject) {
+        
+        
+         contentView.addSubview(trendingViewController.view)
+        
     }
     
     @IBAction func composeButton(sender: AnyObject) {
+        
+        
+        
+        
+        
     }
     
     
