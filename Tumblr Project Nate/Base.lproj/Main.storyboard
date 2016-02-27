@@ -28,25 +28,18 @@
                                         <state key="normal" image="home_icon"/>
                                         <state key="selected" image="home_selected_icon"/>
                                         <connections>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZLb-se-cXO"/>
                                             <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ae-uO-kfh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cjn-Q6-diz">
-                                        <rect key="frame" x="74" y="4" width="35" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="search_icon"/>
-                                        <state key="selected" image="search_selected_icon"/>
-                                        <connections>
-                                            <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VS-fT-qDC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jlt-yl-m0O">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jlt-yl-m0O">
                                         <rect key="frame" x="218" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="account_icon"/>
                                         <state key="selected" image="account_selected_icon"/>
                                         <connections>
                                             <action selector="accountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ez7-st-uCH"/>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9t5-fx-Szf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RsL-wz-ghD">
@@ -55,6 +48,7 @@
                                         <state key="normal" image="trending_icon"/>
                                         <state key="selected" image="trending_selected_icon"/>
                                         <connections>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4A-2x-QnN"/>
                                             <action selector="trendingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tds-Wc-xPM"/>
                                         </connections>
                                     </button>
@@ -66,6 +60,16 @@
                                             <action selector="composeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KU2-Y4-D5f"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cjn-Q6-diz">
+                                        <rect key="frame" x="75" y="4" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="search_icon"/>
+                                        <state key="selected" image="search_selected_icon"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xM5-fd-JHf"/>
+                                            <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VS-fT-qDC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.25882352941176467" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -73,7 +77,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="accountButton" destination="jlt-yl-m0O" id="GuF-RH-DoQ"/>
+                        <outlet property="composeButton" destination="QSe-g2-f4l" id="xSL-vU-HH5"/>
                         <outlet property="contentView" destination="0p2-ZA-zU7" id="WMm-pZ-WE1"/>
+                        <outlet property="homeButton" destination="2IK-MH-oVV" id="cun-Or-NsH"/>
+                        <outlet property="searchButton" destination="cjn-Q6-diz" id="cB6-eO-9UQ"/>
+                        <outlet property="trendingButton" destination="RsL-wz-ghD" id="y7l-j1-lNY"/>
+                        <outletCollection property="buttons" destination="2IK-MH-oVV" collectionClass="NSMutableArray" id="zp9-3d-ui5"/>
+                        <outletCollection property="buttons" destination="cjn-Q6-diz" collectionClass="NSMutableArray" id="8se-br-Kzi"/>
+                        <outletCollection property="buttons" destination="jlt-yl-m0O" collectionClass="NSMutableArray" id="dPc-lA-3mo"/>
+                        <outletCollection property="buttons" destination="RsL-wz-ghD" collectionClass="NSMutableArray" id="Dmu-lF-WV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

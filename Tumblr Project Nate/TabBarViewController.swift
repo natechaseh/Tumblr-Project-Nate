@@ -12,14 +12,26 @@ class TabBarViewController: UIViewController {
 
     //outlets
     
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
+    @IBOutlet weak var trendingButton: UIButton!
+    @IBOutlet weak var composeButton: UIButton!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet var buttons: [UIButton]!
+
     
     //variables
     
-    var homeViewController: UIViewController!
-    var trendingViewController: UIViewController!
-    var searchViewController: UIViewController!
-    var accountViewController: UIViewController!
+    var HomeViewController: UIViewController!
+    var TrendingViewController: UIViewController!
+    var SearchViewController: UIViewController!
+    var AccountViewController: UIViewController!
+    
+    var viewControllers: [UIViewController]!
+    
+    var selectedIndex: Int = 0
+    
 
     //viewdidload
     
@@ -31,16 +43,56 @@ class TabBarViewController: UIViewController {
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
+        HomeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
         
-        trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
+        TrendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
         
-        searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
+        SearchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
         
-        accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
+        AccountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
+        
+        
+        viewControllers = [HomeViewController, SearchViewController, AccountViewController, TrendingViewController]
+        
+        
+        buttons[selectedIndex].selected = true
+        didPressTab(buttons[selectedIndex])
         
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func didPressTab(sender: UIButton) {
+        
+        let previousIndex = selectedIndex
+        
+        selectedIndex = sender.tag
+        
+        buttons[previousIndex].selected = false
+        
+        let previousVC = viewControllers[previousIndex]
+        
+        previousVC.willMoveToParentViewController(nil)
+        previousVC.view.removeFromSuperview()
+        previousVC.removeFromParentViewController()
+        
+        sender.selected = true
+        
+        let vc = viewControllers[selectedIndex]
+        
+        addChildViewController(vc)
+        
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        
+        vc.didMoveToParentViewController(self)
+        
+        
+        
+    }
+    
+   
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,19 +102,19 @@ class TabBarViewController: UIViewController {
 
     @IBAction func homeButton(sender: AnyObject) {
         
-        contentView.addSubview(homeViewController.view)
+        contentView.addSubview(HomeViewController.view)
         
     }
     
     @IBAction func searchButton(sender: AnyObject) {
         
-        contentView.addSubview(searchViewController.view)
+        contentView.addSubview(SearchViewController.view)
         
     }
     
     @IBAction func accountButton(sender: AnyObject) {
         
-        contentView.addSubview(accountViewController.view)
+        contentView.addSubview(AccountViewController.view)
         
         
         
@@ -71,7 +123,7 @@ class TabBarViewController: UIViewController {
     @IBAction func trendingButton(sender: AnyObject) {
         
         
-         contentView.addSubview(trendingViewController.view)
+         contentView.addSubview(TrendingViewController.view)
         
     }
     
