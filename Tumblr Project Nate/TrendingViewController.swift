@@ -14,11 +14,10 @@ class TrendingViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       scrollView.contentSize = CGSizeMake(320, imageView.image!.size.height)
+        scrollView.contentSize = imageView.image!.size
         
         //scrollView.contentSize = imageView.image!.size
 
