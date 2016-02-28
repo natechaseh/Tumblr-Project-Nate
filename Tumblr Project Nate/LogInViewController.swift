@@ -1,14 +1,14 @@
 //
-//  ComposeViewController.swift
+//  LogInViewController.swift
 //  Tumblr Project Nate
 //
-//  Created by Nathaniel Hajian on 2/23/16.
+//  Created by Nathaniel Hajian on 2/28/16.
 //  Copyright © 2016 Nathaniel Hajian. All rights reserved.
 //
 
 import UIKit
 
-class ComposeViewController: UIViewController {
+class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,9 @@ class ComposeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismissCompose(sender: UIButton) {
+    
+    @IBAction func dismissLogin(sender: UIButton) {
+        
         
         dismissViewControllerAnimated(true, completion: nil)
     }

@@ -20,6 +20,7 @@
 		AA97354B1C7D066F00C33063 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97354A1C7D066F00C33063 /* ComposeViewController.swift */; };
 		AA97354D1C7D067C00C33063 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97354C1C7D067C00C33063 /* AccountViewController.swift */; };
 		AA97354F1C7D068B00C33063 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97354E1C7D068B00C33063 /* TrendingViewController.swift */; };
+		AA9735911C83BC4600C33063 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9735901C83BC4600C33063 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		AA97354A1C7D066F00C33063 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		AA97354C1C7D067C00C33063 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AA97354E1C7D068B00C33063 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		AA9735901C83BC4600C33063 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				AA9735161C7D043900C33063 /* AppDelegate.swift */,
 				AA9735181C7D043900C33063 /* ViewController.swift */,
 				AA97351A1C7D043900C33063 /* Main.storyboard */,
+				AA9735901C83BC4600C33063 /* LogInViewController.swift */,
 				AA9735461C7D065500C33063 /* HomeViewController.swift */,
 				AA9735481C7D066000C33063 /* SearchViewController.swift */,
 				AA97354A1C7D066F00C33063 /* ComposeViewController.swift */,
@@ -279,6 +282,7 @@
 			files = (
 				AA9735491C7D066000C33063 /* SearchViewController.swift in Sources */,
 				AA97354F1C7D068B00C33063 /* TrendingViewController.swift in Sources */,
+				AA9735911C83BC4600C33063 /* LogInViewController.swift in Sources */,
 				AA9735191C7D043900C33063 /* ViewController.swift in Sources */,
 				AA97354D1C7D067C00C33063 /* AccountViewController.swift in Sources */,
 				AA9735451C7D061000C33063 /* TabBarViewController.swift in Sources */,
@@ -509,6 +513,7 @@
 				AA97353D1C7D043900C33063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA97353E1C7D043900C33063 /* Build configuration list for PBXNativeTarget "Tumblr Project NateTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				AA9735401C7D043900C33063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA9735411C7D043900C33063 /* Build configuration list for PBXNativeTarget "Tumblr Project NateUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				AA9735431C7D043900C33063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
